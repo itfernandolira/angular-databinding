@@ -11,6 +11,6 @@ export class AppComponent {
     type: string;
     name: string;
     content: string;
-  }[] = [];
+  }[] = [{type: 'server', name: 'Server Test', content: 'Just a test!'}];
 
 }
