@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, ContentChild, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-cockpit',
@@ -11,6 +11,7 @@ export class CockpitComponent implements OnInit {
   //newServerName = '';
   //newServerContent = '';
   @ViewChild('serverContentInput') serverContentInput: ElementRef<HTMLInputElement> = {} as ElementRef;
+  
 
   constructor() { }
 

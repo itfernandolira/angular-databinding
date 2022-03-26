@@ -4,6 +4,7 @@ import {
   AfterViewChecked,
   AfterViewInit,
   Component,
+  ContentChild,
   DoCheck,
   ElementRef,
   Input,
@@ -39,6 +40,7 @@ export class ServerElementComponent
   } = {};
   @Input() name: string = '';
   @ViewChild('heading') header: ElementRef<HTMLInputElement> = {} as ElementRef;
+  @ContentChild('contentParagraph') paragraph: ElementRef<HTMLInputElement> = {} as ElementRef;
 
   //1
   constructor() {
@@ -56,6 +58,7 @@ export class ServerElementComponent
   ngOnInit(): void {
     console.log('ngOnInit called!');
     console.log("Text content of header"+this.header.nativeElement.textContent);
+    console.log("Text content of paragraph"+this.paragraph.nativeElement.textContent);
   }
 
   //4
@@ -66,6 +69,7 @@ export class ServerElementComponent
   //5
   ngAfterContentInit(): void {
     console.log('ngAfterContentInit called!');
+    console.log("Text content of paragraph"+this.paragraph.nativeElement.textContent);
   }
 
   //6
