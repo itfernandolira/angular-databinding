@@ -22,7 +22,7 @@ export class AppComponent {
 
   onBluePrintCreated(serverData: { serverName: string; serverContent: string }) {
     this.serverElements.push({
-      type: 'server',
+      type: 'blueprint',
       name: serverData.serverName,
       content: serverData.serverContent,
     });
